@@ -1,12 +1,15 @@
 <header class="mb-10 w-full">
-    <app-hearder> </app-hearder>
+    <app-hearder />
 </header>
 
 <div class="flex items-center justify-center container mx-auto">
-    <app-new-post></app-new-post>
+    <app-new-post />
+</div>
+<div class="flex items-center justify-center flex-col container mx-auto" 
+*ngFor="let tw of tweets.reverse() ">
+    <app-tweet [TweetMessage]=tw />
 </div>
 
-<div class="fixed bottom-0 w-full ">
-    <app-footer></app-footer>
-</div>
-
+<div class="bottom-0 w-full ">
+    <app-footer />
+</div> 
